@@ -18,7 +18,7 @@ npm-debug.log*
 .tmp/
 .versions/
 automatic-build/
-build/
+#build/
 coverage/
 dist/
 fastlane/metadata
