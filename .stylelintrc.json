@@ -1,0 +1,51 @@
+{
+	"plugins": ["stylelint-scss", "stylelint-order"],
+	"extends": "stylelint-config-recommended",
+	"rules": {
+		"at-rule-no-unknown": null,
+		"scss/at-rule-no-unknown": null,
+		"no-empty-source": null,
+		"block-no-empty": null,
+		"font-family-no-missing-generic-family-keyword": null,
+		"property-no-unknown": [
+			true,
+			{
+				"ignoreProperties": ["font-smoothing"]
+			}
+		],
+		"selector-pseudo-class-no-unknown": [
+			true,
+			{
+				"ignorePseudoClasses": ["local"]
+			}
+		],
+		"order/order": ["custom-properties", "declarations"],
+
+		"order/properties-order": [
+			"float",
+			"position",
+			"top",
+			"right",
+			"bottom",
+			"left",
+			"z-index",
+			"display",
+			"width",
+			"height",
+			"margin",
+			"margin-top",
+			"margin-right",
+			"margin-bottom",
+			"margin-left",
+			"padding",
+			"padding-top",
+			"padding-right",
+			"padding-bottom",
+			"padding-left",
+			"color",
+			"background",
+			"background-color",
+			"box-shadow"
+		]
+	}
+}

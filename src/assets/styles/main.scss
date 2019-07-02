@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+@import '_core/_core'; // (0)
+@import 'tools/tools'; // (1)
+@import 'base/base'; // (2)
+@import 'icons/icons'; // (3)
+@import 'layout/layout'; // (4)
+@import 'pages/pages'; // (5)
+@import 'components/components'; // (6)
+@import 'theme/theme'; // (7)
+
+// -----------------------------------------------------------------------------
+// 0.- Coke (custom framework):
+//
+//    It configure box-sizing, gutters, margin rhythm, font size base and
+//    shortcuts. It also has a resetter and a standardizer (normalizer) for
+//    tag-level styles.
+
+// -----------------------------------------------------------------------------
+// 1.- Tools (Coke tools):
+//
+//    It has different tools, utilities and shortcuts, to debug, for responsive,
+//    flexbox, positions, animations, etc.
+
+// -----------------------------------------------------------------------------
+// 2.- Base:
+//
+//    It included tokens (variables, gutters, text fonts, theme settings and his
+// colors) and html,body config (font-size, line-height, main height's, etc).
+
+// -----------------------------------------------------------------------------
+// 3.- Icons:
+//
+// Includes the font of icons (Icomoon) and shortcuts and related utilities.
+
+// -----------------------------------------------------------------------------
+// 4.- Layout:
+//
+//    Main design (header, application, chat, etc.) and intermediate designs.
+//    Organize components together.
+
+// -----------------------------------------------------------------------------
+// 5.- Pages:
+//
+//    Peculiarities of each page that do not fit in other sites. Using as little
+//    as possible will be a good symptom of the health of our CSS.
+
+// -----------------------------------------------------------------------------
+// 6.- Components:
+//
+//    Context-independent, atomic structures. They are organized by
+//    layouts and styled by the theme. They are organized by layouts or
+//    independent of any context and styled by the theme. A component can be
+//    formed by other smaller components.
+
+// -----------------------------------------------------------------------------
+// 7.- Theme layer:
+//
+//    Or look & feel. It is responsible for the components
+//    at the aesthetic level (backgrounds, colors, etc) and to abstract
+//    in different themes (currently 'ocean' and 'lollipop').

@@ -1,0 +1,40 @@
+// Font weights (Coke's transference):
+$font-light: $coke-font-light !default;
+$font-regular: $coke-font-regular !default;
+$font-bold: $coke-font-bold !default;
+$font-black: $coke-font-black !default;
+
+$font-open-sans: 'Open Sans' !default;
+$font-roboto-condensed: 'Roboto Condensed' !default;
+$font-fallback: sans-serif !default;
+
+[font-open-sans],
+.font-open-sans {
+	font-family: $font-open-sans, $font-fallback;
+}
+
+@mixin open-sans {
+	font-family: $font-open-sans, $font-fallback;
+}
+
+[font-roboto-condensed],
+.font-roboto-condensed {
+	font-family: $font-roboto-condensed, $font-fallback;
+}
+
+@mixin roboto-condensed {
+	font-family: $font-roboto-condensed, $font-fallback;
+}
+
+@function open-sans() {
+	@return $font-open-sans, $font-fallback;
+}
+
+@function roboto-condensed() {
+	@return $font-roboto-condensed, $font-fallback;
+}
+
+@font-face {
+	font-family: $font-open-sans, $font-fallback;
+	font-family: $font-roboto-condensed, $font-fallback;
+}

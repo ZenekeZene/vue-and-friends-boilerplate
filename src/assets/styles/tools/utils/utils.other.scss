@@ -1,0 +1,116 @@
+/// Share values for multiple properties
+/// @access public
+/// @group properties
+/// @example scss
+///     @include share(padding-top, padding-bottom, 23px);
+@mixin share($props...) {
+	@for $i from 1 to length($props) {
+		#{nth($props, $i)}: nth($props, -1);
+	}
+}
+
+@mixin circle($tam) {
+	display: inline-block;
+	@include tam-specified($tam);
+	text-align: center;
+	border-radius: 50%;
+}
+
+@mixin triangle(
+	$color,
+	$direction,
+	$size: 6px,
+	$position: absolute,
+	$round: false
+) {
+	@include pseudo($position: $position);
+	width: 0;
+	height: 0;
+
+	@if $round {
+		border-radius: 3px;
+	}
+
+	@if $direction == down {
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		border-top: $size solid $color;
+	} @else if $direction == up {
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		border-bottom: $size solid $color;
+	} @else if $direction == right {
+		border-top: $size solid transparent;
+		border-bottom: $size solid transparent;
+		border-left: $size solid $color;
+	} @else if $direction == left {
+		border-top: $size solid transparent;
+		border-bottom: $size solid transparent;
+		border-right: $size solid $color;
+	}
+}
+
+@mixin pseudo($display: block, $position: absolute, $content: '') {
+	content: $content;
+	position: $position;
+	display: $display;
+}
+
+@mixin push-auto {
+	@include share(margin-left, margin-right, auto);
+}
+
+@mixin input-placeholder {
+	.placeholder {
+		@content;
+	}
+	:-moz-placeholder {
+		@content;
+	}
+	:-ms-input-placeholder {
+		@content;
+	}
+	:-webkit-input-placeholder {
+		@content;
+	}
+}
+
+// Hide from both screenreaders and browsers
+@mixin hidden {
+	display: none;
+	visibility: hidden;
+}
+
+@mixin unselectable {
+	-webkit-touch-callout: none;
+	user-select: none;
+}
+
+@mixin hover {
+	&:hover {
+		cursor: pointer;
+		@content;
+	}
+}
+
+@mixin states {
+	&:active,
+	&:focus,
+	&:visited,
+	&:hover {
+		@content;
+	}
+}
+
+/// Duplicate selectors, to override high specificities
+/// Warning, use it when it's neccesary, it's dangerous
+@mixin selector-hack($selector, $num-duplicate) {
+	$selector-final: '';
+	@for $i from 1 through $num-duplicate {
+		$selector-final: $selector-final + $selector;
+	}
+
+	#{$selector-final} {
+		@content;
+	}
+}

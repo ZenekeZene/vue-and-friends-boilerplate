@@ -1,0 +1,73 @@
+// FONT WEIGHTS:
+$font-thin: 100;
+$font-extra-light: 200;
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 500;
+$font-semi-bold: 600;
+$font-bold: 700;
+$font-extra-bold: 800;
+$font-black: 900;
+
+$font-weights: (
+	'thin': $font-thin,
+	'extra-light': $font-extra-light,
+	'light': $font-light,
+	'regular': $font-regular,
+	'medium': $font-medium,
+	'semi-bold': $font-semi-bold,
+	'bold': $font-bold,
+	'extra-bold': $font-extra-bold,
+	'black': $font-black,
+);
+
+@each $font-name, $font-value in $font-weights {
+	// 2 types, classname and also in mode attribute, as Ionic CSS Utilities:
+	.font-#{$font-name},
+	[font-#{$font-name}] {
+		font-weight: $font-value;
+	}
+}
+
+.text-underline {
+	text-decoration: underline;
+}
+
+.pre-wrap,
+[pre-wrap] {
+	white-space: pre-wrap;
+}
+
+// FONT SIZES:
+$font-size-xs: 1rem; // 10px
+$font-size-s: 1.2rem; // 12px
+$font-size-m: 1.4rem; // 14px
+$font-size-l: 1.8rem; // 18px
+$font-size-xl: 2.2rem; // 22px
+$font-size-xxl: 3.2rem; // 32px
+
+$font-sizes: (
+	'xs': $font-size-xs,
+	's': $font-size-s,
+	'm': $font-size-m,
+	'l': $font-size-l,
+	'xl': $font-size-xl,
+	'xxl': $font-size-xxl,
+);
+
+@each $font-name, $font-value in $font-sizes {
+	// 2 types, classname and also in mode attribute, as Ionic CSS Utilities:
+	.font-size-#{$font-name},
+	[font-size-#{$font-name}] {
+		font-size: $font-value;
+	}
+}
+
+[font-18] {
+	font-size: $font-size-l !important;
+}
+
+@mixin font-size-height($size) {
+	font-size: $size;
+	line-height: $size;
+}

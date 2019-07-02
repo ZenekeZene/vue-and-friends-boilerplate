@@ -1,0 +1,52 @@
+html {
+	display: block;
+	@include share(width, height, 100%);
+	overflow: auto;
+}
+
+html,
+body {
+	height: 100%;
+	@include open-sans;
+	color: color-cold('mid');
+}
+
+body {
+	position: fixed;
+	overflow: visible; // (1)
+	@include share(width, max-width, height, max-height, 100%);
+	@include share(margin, padding, 0);
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-webkit-user-drag: none;
+	-ms-content-zooming: none;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	word-wrap: break-word;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	text-size-adjust: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	font-size: $font-size;
+	line-height: 1.5;
+	background-color: $color-background;
+
+	@include media('<=phablet') {
+		font-size: 13px;
+	}
+}
+
+.app,
+.app__inner {
+	height: 100%;
+}
+
+// 1: Search the next keyword: HACK_HEADER
+#hola {
+	color: red;
+}

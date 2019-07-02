@@ -1,0 +1,118 @@
+$padding: $gutter;
+$padding-double: $padding * 2;
+
+// Paddings:
+[padding-vertical] {
+	padding-top: $padding;
+	padding-bottom: $padding;
+}
+
+[padding-horizontal] {
+	padding-right: $padding;
+	padding-left: $padding;
+}
+
+[padding] {
+	padding: $padding;
+}
+[padding-top] {
+	padding-top: $padding;
+}
+[padding-right] {
+	padding-right: $padding;
+}
+[padding-bottom] {
+	padding-bottom: $padding;
+}
+[padding-left] {
+	padding-left: $padding;
+}
+
+// Padding Double:
+[padding-2] {
+	padding: $padding-double;
+}
+
+[padding-vertical-2] {
+	padding-top: $padding-double;
+	padding-bottom: $padding-double;
+}
+
+// Margins:
+$margin: $gutter;
+$margin-double: $margin * 2;
+
+[margin-vertical] {
+	margin-top: $margin;
+	margin-bottom: $margin;
+}
+
+[margin-horizontal] {
+	margin-right: $margin;
+	margin-left: $margin;
+}
+
+[margin] {
+	margin: $margin;
+}
+[margin-top] {
+	margin-top: $margin;
+}
+[margin-right] {
+	margin-right: $margin;
+}
+[margin-bottom] {
+	margin-bottom: $margin;
+}
+[margin-left] {
+	margin-left: $margin;
+}
+
+// Margin Double:
+[margin-2] {
+	margin: $margin-double;
+}
+
+[margin-vertical-2] {
+	margin-top: $margin-double;
+	margin-bottom: $margin-double;
+}
+
+[margin-horizontal-2] {
+	margin-right: $margin-double;
+	margin-left: $margin-double;
+}
+
+[margin-top-2] {
+	margin-top: $margin-double;
+}
+[margin-right-2] {
+	margin-right: $margin-double;
+}
+[margin-bottom-2] {
+	margin-bottom: $margin-double;
+}
+[margin-left-2] {
+	margin-left: $margin-double;
+}
+
+// Block elements:
+@mixin block() {
+	display: block;
+	width: 100%;
+}
+
+[block],
+.block {
+	@include block;
+}
+
+@mixin block--full {
+	@include block;
+	height: 100%;
+}
+
+[block--full],
+.block--full {
+	@include block--full;
+}

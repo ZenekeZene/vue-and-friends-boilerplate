@@ -1,0 +1,19 @@
+// (1)
+$gutter: $coke-gutter;
+$breakpoints: $coke-breakpoints;
+$font-size: $coke-font-size;
+
+// (2)
+$url-images: './base/tokens/images/';
+
+$height-header: 70px;
+$height-answers: 100px;
+$max-width-app: 1000px;
+
+$border-icon-width: 2px;
+$border-radius: $gutter-1-2;
+$size-icon-figure: 8rem;
+$max-height-tag: $gutter-4;
+
+// 1: Transference Coke -> Starr variables.
+// 2: Starr variables.
