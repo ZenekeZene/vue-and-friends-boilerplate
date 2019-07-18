@@ -8,25 +8,15 @@
 ul,
 ol {
 	list-style: none;
-	@include share(margin, padding, 0);
+	display: inline-flex;
+    flex-direction: column;
+	margin: 0;
+    padding: $gutter-1-2;
 }
 
 a:visited,
 a:focus {
 	color: inherit;
-}
-
-.icon {
-	@include circle(2em);
-
-	&--mini {
-		@include circle(1em);
-	}
-
-	&--big {
-		@extend .icon--mini;
-		@include circle(5em);
-	}
 }
 
 h1,
@@ -36,5 +26,4 @@ h4,
 h5,
 h6 {
 	font-weight: $font-light;
-	font-family: open-sans();
 }

@@ -3,7 +3,7 @@ $coke-generate-margin-rhythm: false !default;
 @if ($coke-generate-margin-rhythm) {
 	/*
 	* ------------------------------------------------
-	* [Common] - Margin Rhythm
+	* [Common] - Margin Rhythm
 	* ------------------------------------------------
 	*/
 
@@ -58,7 +58,7 @@ $coke-generate-page-setup: false !default;
 	// 3. Ensure the page always fills at least the entire height of the viewport.
 
 	html {
-		font-size: ($coke-font-size / 16px) * 1em; // [1]
+		font-size: calc(#{$coke-font-size} / 16px); // [1]
 		line-height: $coke-line-height * $coke-font-size; // [1]
 		overflow-y: scroll; // [2]
 		min-height: 100%; // [3]

@@ -17,20 +17,20 @@
 }
 
 [margins-paddings-to-zero] {
-	margin: 0;
-	padding: 0;
+	margin: 0 !important;
+	padding: 0 !important;
 }
 
 [margin-bottom-zero] {
-	margin-bottom: 0;
+	margin-bottom: 0 !important;
 }
 
 // Basic colors:
 [color-white] {
-	color: white;
+	color: white !important;
 }
 [color-black] {
-	color: black;
+	color: black !important;
 }
 
 // States:
@@ -41,34 +41,15 @@
 }
 
 // Text align:
-[text-center] {
-	text-align: center;
-}
-[text-left] {
-	text-align: left;
-}
-[text-right] {
-	text-align: right;
-}
+[text-center] { text-align: center !important; }
+[text-left]   { text-align: left !important; }
+[text-right]  { text-align: right !important; }
 
 // Positions:
+[relative] { position: relative !important; }
+[absolute] { position: absolute !important; }
 
-[relative] {
-	position: relative;
-}
-[absolute] {
-	position: absolute;
-}
-
-[top] {
-	top: 0;
-}
-[right] {
-	right: 0;
-}
-[bottom] {
-	bottom: 0;
-}
-[left] {
-	left: 0;
-}
+[top] 	 { top: 0 !important; }
+[right]  { right: 0 !important; }
+[bottom] { bottom: 0 !important; }
+[left]   { left: 0 !important; }

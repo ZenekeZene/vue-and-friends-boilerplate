@@ -1,7 +1,7 @@
 {
 	"name": "vue-and-friends-boilerplate",
 	"version": "1.0.0",
-	"description": "A Vue.js project",
+	"description": "A Vue.js boilerplate",
 	"author": "Héctor Villar Mozo <hectorvillarm@gmail.com>",
 	"private": true,
 	"scripts": {

@@ -8,7 +8,6 @@ html,
 body {
 	height: 100%;
 	@include open-sans;
-	color: color-cold('mid');
 }
 
 body {
@@ -37,16 +36,17 @@ body {
 	background-color: $color-background;
 
 	@include media('<=phablet') {
-		font-size: 13px;
+		font-size: 0.8rem;
 	}
 }
 
-.app,
-.app__inner {
+.app {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	@include flex(flex, center, center);
+	flex-direction: column;
 	height: 100%;
-}
-
-// 1: Search the next keyword: HACK_HEADER
-#hola {
-	color: red;
+	padding: $gutter;
+    text-align: center;
+    color: $color-primary;
 }

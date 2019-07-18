@@ -1,6 +1,6 @@
 # Vue and friends Boilerplate
 
-![Logo](http://hectorvillar.com/img/profile.png)
+![Logo](./static/logo.png)
 
 This is a repository in the form of a boilerplate / template based on a Vue base project through vue-cli plus a few add-ons.
 
@@ -14,11 +14,6 @@ Among other things, it has the following...
 - Webpack (
 fully configured 🤪)
 - Babel
-- ESLint
-- StyleLint
-- Prettier
-- PostCSS (support and Autoprefixer)
-- SASS
 - Coke 🥤(my own SASS framework).
   - Include media library.
   - ITCSS-like.
@@ -27,9 +22,14 @@ fully configured 🤪)
   - Debug.
   - Animation, gradients, etc.
   - Sugar Syntax!
+- PostCSS (support and Autoprefixer)
+- Husky (pre-commit git hooks).
+- ESLint
+- StyleLint
+- Prettier
+- SASS
 - Pug 🐶
 - Jest
-- Husky (pre-commit git hooks).
 
 Just use what interests you. 
 
