@@ -1,0 +1,21 @@
+.github {
+	@include absolute(bottom right);
+
+	&:before {
+		$size: 6rem;
+		@include triangle($color-primary, left, $size);
+		right: 0;
+		bottom: -$size;
+	}
+
+	img {
+    	width: $gutter-2;
+		margin: $gutter-1-3 $gutter-1-2;
+		filter: invert(1);
+		transition: margin 250ms ease-in-out;
+	}
+
+	&:hover img {
+		margin-bottom: $gutter-1-2;
+	}
+}

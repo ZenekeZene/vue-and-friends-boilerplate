@@ -49,6 +49,7 @@ npm install
 npm run dev
 ```
 
+---
 
-## Any contribution is welcome 😊
+Any contribution is welcome 😊
 
