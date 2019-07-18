@@ -1,6 +1,6 @@
 # Vue and friends Boilerplate
 
-<img src="./static/logo.png" style="width: 350px; height: 380px"/>
+<img src="./static/logo.png" width="350" height="380" />
 
 This is a repository in the form of a boilerplate / template based on a Vue base project through vue-cli plus a few add-ons.
 
