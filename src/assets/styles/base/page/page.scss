@@ -49,4 +49,9 @@ body {
 	padding: $gutter;
     text-align: center;
     color: $color-primary;
+
+	&__logo {
+		max-width: 300px;
+		margin-bottom: $gutter;
+	}
 }

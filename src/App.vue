@@ -1,6 +1,6 @@
 <template>
   <main class="app">
-    <img src="/static/logo.png" alt="Logo of boilerplate" margin-bottom>
+    <img src="/static/logo.png" alt="Logo of boilerplate" class="app__logo">
     <router-view/>
 	<github-item></github-item>
   </main>
