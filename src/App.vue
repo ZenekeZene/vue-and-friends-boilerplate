@@ -14,5 +14,11 @@ export default {
 	components: {
 		GithubItem,
 	},
+	methods: {
+		prueba() {
+			console.log('hola')
+			console.log('hola!')
+		}
+	},
 };
 </script>
